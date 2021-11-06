@@ -79,7 +79,7 @@ public class Block {
         vertices[4] = new Vector3((float)(position.x + 0.5), (float)(position.y + 0.5), (float)(position.z + 0.5)); //E
         vertices[5] = new Vector3((float)(position.x - 0.5), (float)(position.y + 0.5), (float)(position.z + 0.5)); //F
         vertices[6] = new Vector3((float)(position.x + 0.5), (float)(position.y - 0.5), (float)(position.z + 0.5)); //G
-        vertices[7] = new Vector3((float)(position.x - 0.5), (float)(position.y - 0.5), (float)(position.z + 0.5)); //D
+        vertices[7] = new Vector3((float)(position.x - 0.5), (float)(position.y - 0.5), (float)(position.z + 0.5)); //H
 
 
     }

@@ -13,22 +13,23 @@ public class Terrain : MonoBehaviour {
     float freq;
     float active;
     float seed;
+    public int RenderDistance;
 
     
     void Start() {
-        generate_terrain();
+       old_generate_terrain();
 
     }
 
     void update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) == true) {
             Player.transform.position = new Vector3(Player.transform.position.x, 100, Player.transform.position.z);
-            generate_terrain();
+            old_generate_terrain();
         }
     }
 
 
-    void generate_terrain() {
+    void old_generate_terrain() {
         freq = Random.Range(10, 30);
         active = Random.Range(10, 30);
         seed = Random.Range(10, 1000);
@@ -47,6 +48,16 @@ public class Terrain : MonoBehaviour {
                 block_obj.GetComponent<MeshRenderer>().material = BlockMaterial;
                 block_obj.transform.parent = BlockContainer.transform;
 
+            }
+        }
+    }
+
+    void generate_terain() {
+        for (int x = 0; x < RenderDistance; x++) {
+            for (int z = 0; z < RenderDistance; z++) {
+                for (int y = 0; y < 256; y++) {
+
+                }
             }
         }
     }
